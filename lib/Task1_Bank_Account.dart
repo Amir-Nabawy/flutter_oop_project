@@ -38,7 +38,7 @@ class BankAccount {
   }
 
   void withdraw(num amount) {
-    if (amount > 0) {
+    if (amount > 0 && balance > amount ) {
       _balance -= amount;
       print(" OK withdraw Money $amount . balance $_balance ");
       print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -51,5 +51,5 @@ class BankAccount {
 void main() {
   BankAccount myAccount = BankAccount(accountNumber: 1069744164);
   myAccount.deposit(1000);
-  myAccount.withdraw(200);
+  myAccount.withdraw(2000);
 }
